@@ -32,19 +32,20 @@ O projeto tem como foco:
 ## 🗃️ Estrutura de Diretórios
 
 sghss-backend/
-├── .idea
-├── instance #Banco
-├── login-java-springboot # login com java pra testar o JWT
-└── README.md # Este arquivo
-├── app.py # Arquivo principal que inicia a aplicação
-├── config.py 
-├── consultas.py 
-├── limparconsultas.py 
-├── models.py # 
-├── pacientes.py 
-├── profissional
-├── routes.py
-├── sghss.db
+
+├── .idea/ # Configurações do PyCharm
+├── instance/ # Arquivo do banco SQLite (sghss.db)
+├── login-java-springboot/ # Login feito em Java para testes com JWT
+├── README.md # Este arquivo
+├── app.py # Arquivo principal que inicia a aplicação Flask
+├── config.py # Configurações da aplicação
+├── consultas.py # Rotas e lógica de consultas médicas
+├── limparconsultas.py # Script para limpar registros de consultas (opcional)
+├── models.py # Definição das entidades do banco (Paciente, Profissional, etc.)
+├── pacientes.py # Código referente às rotas ou lógica de pacientes (se usado)
+├── profissional/ # Diretório contendo as rotas e lógica dos profissionais de saúde
+├── routes.py # Outras rotas gerais da aplicação
+└── sghss.db # Banco de dados SQLite
 
 
 🔐 Módulo de Login (Java)
