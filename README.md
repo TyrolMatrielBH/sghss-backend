@@ -26,25 +26,23 @@ Este projeto é um sistema backend desenvolvido em **Python com Flask**, que sim
 ---
 
 ## 🗃️ Estrutura de Diretórios
-
+```
 sghss-backend/
-├── .idea/ # Configurações do PyCharm
-├── instance/ # Arquivo do banco SQLite (sghss.db)
-├── login-java-springboot/ # Login feito em Java para testes com JWT
-├── README.md # Este arquivo
-├── app.py # Arquivo principal que inicia a aplicação Flask
-├── config.py # Configurações da aplicação
-├── consultas.py # Rotas e lógica de consultas médicas
-├── limparconsultas.py # Script opcional para limpar registros de consultas
-├── models.py # Definição das entidades do banco (Paciente, Profissional, etc.)
-├── pacientes.py # Lógica de pacientes (se utilizado)
-├── profissional/ # Diretório com rotas dos profissionais de saúde
-├── routes.py # Rotas gerais da aplicação
-└── sghss.db # Banco de dados SQLite
+├── .idea/                    # Configurações do PyCharm
+├── instance/                 # Arquivo do banco SQLite (sghss.db)
+├── login-java-springboot/   # Login feito em Java para testes com JWT
+├── README.md                 # Este arquivo
+├── app.py                   # Arquivo principal que inicia a aplicação Flask
+├── config.py                # Configurações da aplicação
+├── consultas.py             # Rotas e lógica de consultas médicas
+├── limparconsultas.py       # Script para limpar registros de consultas
+├── models.py                # Definição das entidades do banco
+├── pacientes.py             # Código das rotas de pacientes
+├── profissional/            # Rotas e lógica dos profissionais de saúde
+├── routes.py                # Rotas gerais da aplicação
+└── sghss.db                 # Banco de dados SQLite
+```
 
-yaml
-Copiar
-Editar
 
 ---
 
@@ -54,9 +52,7 @@ O sistema SGHSS conta com um módulo de autenticação/login desenvolvido separa
 
 /login-java-springboot
 
-markdown
-Copiar
-Editar
+
 
 - A autenticação é baseada em **JWT (JSON Web Token)**
 - Essa implementação visa demonstrar o funcionamento da segurança e a separação entre o backend principal (Python/Flask) e a autenticação
