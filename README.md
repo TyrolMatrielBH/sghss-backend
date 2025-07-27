@@ -44,7 +44,7 @@ sghss-backend/
 ├── pacientes.py 
 ├── profissional
 ├── routes.py
-├──sghss.db
+├── sghss.db
 
 
 🔐 Módulo de Login (Java)
