@@ -80,54 +80,7 @@ O sistema SGHSS conta com um módulo de autenticação/login desenvolvido separa
 
 ---
 
-## 🧪 Testes Automatizados
 
-O arquivo `test_integrado.py` realiza um **teste de fluxo completo**, que:
-
-1. Cria um paciente
-2. Cria um profissional
-3. Agenda uma consulta entre os dois
-4. Verifica se tudo foi executado com sucesso (códigos HTTP e dados retornados)
-
-### ▶️ Como executar os testes
-
-```bash
-python test_integrado.py
-🧱 Padrão de Projeto Utilizado
-Modelos (ORM) estão definidos em models.py
-
-Lógica de negócio nas rotas (como se fossem controllers simplificados)
-
-Camada de testes em test_integrado.py
-
-🧑‍💻 Como Executar o Projeto
-1. Clone este repositório:
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/sghss-backend.git
-cd sghss-backend
-2. Crie e ative um ambiente virtual:
-bash
-Copiar
-Editar
-python -m venv venv
-# No Windows:
-.\venv\Scripts\activate
-3. Instale as dependências:
-bash
-Copiar
-Editar
-pip install flask flask_sqlalchemy flask_cors
-4. Execute o servidor:
-bash
-Copiar
-Editar
-python app.py
-🧼 Observações
-O projeto utiliza SQLite por simplicidade, ideal para testes locais
-
-As datas devem ser enviadas no formato YYYY-MM-DD ou YYYY-MM-DD HH:MM
 
 🤝 Contribuições
 Este projeto foi desenvolvido como parte do curso de Análise e Desenvolvimento de Sistemas, com foco no módulo de Projeto Multidisciplinar.
