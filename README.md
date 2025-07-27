@@ -1,7 +1,5 @@
 SGHSS (Sistema de Gestão Hospitalar e de Serviços de Saúde)
-markdown
-Copiar
-Editar
+
 # 🏥 SGHSS - Sistema de Gestão Hospitalar e de Serviços de Saúde
 
 Este projeto é um sistema backend desenvolvido em **Python com Flask**, que simula o funcionamento de um sistema de gestão hospitalar, permitindo o gerenciamento de pacientes, profissionais da saúde e agendamento de consultas.
