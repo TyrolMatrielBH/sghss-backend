@@ -13,7 +13,7 @@ CORS(app)
 db.init_app(app)
 app.register_blueprint(routes)
 app.register_blueprint(consultas_bp)
-app.register_blueprint(profissionais_bp)
+app.register_blueprint(profissionais_bp1)
 
 @app.route('/')
 def home():
