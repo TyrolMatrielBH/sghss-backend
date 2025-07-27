@@ -25,21 +25,42 @@ O projeto tem como foco:
 - **SQLite** (Banco de dados leve)
 - **unittest** (Módulo de testes do Python)
 - **Postman** (para testes de rotas)
+- **Java** (para login/e teste de JWT)
 
 ---
 
 ## 🗃️ Estrutura de Diretórios
 
 sghss-backend/
-│
-├── app.py # Arquivo principal que inicia a aplicação
-├── models.py # Definições das entidades (Paciente, Profissional, Consulta)
-├── pacientes.py # Rotas relacionadas ao paciente
-├── profissionais.py # Rotas de profissionais da saúde
-├── consultas.py # Rotas para agendamento de consultas
-├── test_integrado.py # Teste integrado de todo o fluxo do sistema
-├── vida_plus.db # Banco de dados SQLite gerado
+├── .idea
+├── instance #Banco
+├── login-java-springboot # login com java pra testar o JWT
 └── README.md # Este arquivo
+├── app.py # Arquivo principal que inicia a aplicação
+├── config.py 
+├── consultas.py 
+├── limparconsultas.py 
+├── models.py # 
+├── pacientes.py 
+├── profissional
+├── routes.py
+├──sghss.db
+
+
+🔐 Módulo de Login (Java)
+O sistema SGHSS conta com um módulo de autenticação/login desenvolvido separadamente utilizando a linguagem Java.
+Esse módulo está localizado na pasta:
+
+bash
+Copiar
+Editar
+/login-java
+Informações adicionais:
+A autenticação é baseada em JWT (JSON Web Token).
+
+Essa implementação visa demonstrar o funcionamento da segurança e separação de responsabilidades entre o backend principal (Python/Flask) e a autenticação.
+
+A integração entre os módulos pode ser feita futuramente via APIs ou gateways.
 
 markdown
 Copiar
