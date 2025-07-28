@@ -74,6 +74,7 @@ source venv/bin/activate
 # Windows
 venv\Scripts\activate
 3. Instale as dependências
+Arquivo requirements tem todas as dependecias usadas.
 
 pip install -r requirements.txt
 4. Execute o servidor
