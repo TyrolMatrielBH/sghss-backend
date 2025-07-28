@@ -35,6 +35,7 @@ sghss-backend/
 ├── app.py                   # Arquivo principal que inicia a aplicação Flask
 ├── config.py                # Configurações da aplicação
 ├── consultas.py             # Rotas e lógica de consultas médicas
+├── criar_tabelas.py         # Novas tabelas
 ├── limparconsultas.py       # Script para limpar registros de consultas
 ├── models.py                # Definição das entidades do banco
 ├── pacientes.py             # Código das rotas de pacientes
@@ -60,32 +61,78 @@ O sistema SGHSS conta com um módulo de autenticação/login desenvolvido separa
 
 ---
 
-## 🧩 Funcionalidades Implementadas
+⚙️ Como Executar Localmente
+1. Clone o repositório
 
-### 📁 Pacientes
+git clone https://github.com/seu-usuario/sghss-backend.git
+cd sghss-backend
+2. Crie um ambiente virtual
 
-- `GET /pacientes` — Lista todos os pacientes
-- `POST /pacientes` — Cria um novo paciente
-- `PUT /pacientes/<id>` — Atualiza um paciente existente
-- `DELETE /pacientes/<id>` — Remove um paciente
+python -m venv venv
+# Linux/macOS
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+3. Instale as dependências
 
-### 👩‍⚕️ Profissionais
+pip install -r requirements.txt
+4. Execute o servidor
 
-- `GET /profissionais` — Lista os profissionais da saúde
-- `POST /profissionais` — Cria um novo profissional
+python app.py
+O servidor estará disponível em:
+📍 http://127.0.0.1:5000
 
-### 📆 Consultas
-
-- `POST /consultas` — Agenda uma nova consulta entre paciente e profissional
-
----
-
+🧪 Testando com Postman
+🔐 Requisições protegidas por JWT
+Algumas rotas exigem autenticação via JWT, gerado por um serviço em Java. Adicione o token no cabeçalho:
 
 
-🤝 Contribuições
-Este projeto foi desenvolvido como parte do curso de Análise e Desenvolvimento de Sistemas, com foco no módulo de Projeto Multidisciplinar.
+Authorization: Bearer SEU_TOKEN_JWT
+📌 Criar um Paciente
+Endpoint: POST /pacientes
+Headers:
+
+
+Content-Type: application/json
+Authorization: Bearer <seu_token>
+Corpo da requisição:
+
+
+{
+  "nome": "Maria Silva",
+  "cpf": "12345678900",
+  "data_nascimento": "1990-05-10"
+}
+📌 Consultar todos os pacientes
+Endpoint: GET /pacientes
+
+📌 Atualizar paciente
+Endpoint: PUT /pacientes/<id>
+Corpo exemplo:
+
+
+{
+  "nome": "Maria S. Oliveira",
+  "cpf": "12345678900",
+  "data_nascimento": "1990-05-12"
+}
+📌 Deletar paciente
+Endpoint: DELETE /pacientes/<id>
+
+📌 Adicionar histórico clínico
+Endpoint: POST /pacientes/<id>/historico
+Exemplo: POST /pacientes/1/historico
+
+Corpo:
+
+
+{
+  "descricao": "Paciente apresentou sintomas de gripe leve."
+}
+📌 Consultar histórico clínico do paciente
+Endpoint: GET /pacientes/<id>/historico
+
 
 👨‍💻 Autor
-Matheus Vitor Lourenço
-Desenvolvedor Back-End | Estudante de ADS
-📍 Belo Horizonte - MG
+Desenvolvido por Matheus Vitor
+Curso de Análise e Desenvolvimento de Sistemas - UNINTER
