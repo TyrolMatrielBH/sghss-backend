@@ -40,6 +40,7 @@ sghss-backend/
 ├── models.py                # Definição das entidades do banco
 ├── pacientes.py             # Código das rotas de pacientes
 ├── profissional/            # Rotas e lógica dos profissionais de saúde
+├── requirements.txt         # Dependencias usadas
 ├── routes.py                # Rotas gerais da aplicação
 └── sghss.db                 # Banco de dados SQLite
 ```
