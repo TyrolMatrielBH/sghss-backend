@@ -1,5 +1,5 @@
 from models import db, Consulta, Paciente, Profissional
-from app import app  # ou o nome do arquivo onde seu app Flask está criado
+from app import app
 
 with app.app_context():
     consultas_inconsistentes = []
@@ -15,7 +15,7 @@ with app.app_context():
 
     print('Consultas inconsistentes:', consultas_inconsistentes)
 
-    # Se quiser apagar essas consultas:
+
     for c in Consulta.query.all():
         if not Paciente.query.get(c.paciente_id) or not Profissional.query.get(c.profissional_id):
             db.session.delete(c)

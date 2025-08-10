@@ -1,4 +1,4 @@
-from app import app  # ou seu arquivo principal, ex: from main import app
+from app import app
 from models import db
 
 with app.app_context():
